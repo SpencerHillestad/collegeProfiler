@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6bI-gD-byX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6bI-gD-byX">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -115,7 +115,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTq-k5-XdU">
-                                <rect key="frame" x="29" y="442" width="46" height="30"/>
+                                <rect key="frame" x="29" y="471" width="46" height="30"/>
                                 <state key="normal" title="Save!"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="S7S-21-K3S" eventType="touchUpInside" id="8RI-wg-7dI"/>
@@ -126,12 +126,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="WebSite" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Oa-Z9-633">
+                                <rect key="frame" x="4" y="433" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLe-FP-Kbi">
+                                <rect key="frame" x="101" y="433" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Dhr-HV-Rga"/>
+                                </constraints>
+                                <state key="normal" title="▶︎"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="S7S-21-K3S" eventType="touchUpInside" id="wur-s6-flE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-JC-FA9">
+                                <rect key="frame" x="101" y="464" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBB-nD-idF">
+                                <rect key="frame" x="20" y="514" width="79" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="📷"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="S7S-21-K3S" eventType="touchUpInside" id="sdG-oi-qdX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Bvl-RK-UUG" firstAttribute="centerX" secondItem="uAv-97-9u6" secondAttribute="centerX" id="7V5-Zu-AgJ"/>
                             <constraint firstItem="yxJ-jt-C6b" firstAttribute="centerX" secondItem="uAv-97-9u6" secondAttribute="centerX" id="7b9-YY-xHy"/>
+                            <constraint firstItem="mBB-nD-idF" firstAttribute="width" secondItem="Yfw-JC-FA9" secondAttribute="width" id="Hwm-bS-ygM"/>
                             <constraint firstItem="D26-mE-qiX" firstAttribute="centerX" secondItem="uAv-97-9u6" secondAttribute="centerX" id="cfb-Il-JA6"/>
+                            <constraint firstItem="4Oa-Z9-633" firstAttribute="centerX" secondItem="uAv-97-9u6" secondAttribute="centerX" id="qRg-g6-ieT"/>
                             <constraint firstItem="zTq-k5-XdU" firstAttribute="centerX" secondItem="uAv-97-9u6" secondAttribute="centerX" id="ux8-03-AMK"/>
                             <constraint firstItem="LjW-OV-04G" firstAttribute="centerX" secondItem="uAv-97-9u6" secondAttribute="centerX" id="vtE-yj-7IB"/>
                         </constraints>
@@ -141,6 +169,7 @@
                         <outlet property="myImageView" destination="Bvl-RK-UUG" id="iIQ-6N-vQk"/>
                         <outlet property="nameTF" destination="D26-mE-qiX" id="cDR-FB-BPN"/>
                         <outlet property="studentsTF" destination="yxJ-jt-C6b" id="MwF-5b-x7h"/>
+                        <outlet property="webSiteTF" destination="4Oa-Z9-633" id="nlf-Mu-SrK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIn-Sl-ZO1" userLabel="First Responder" sceneMemberID="firstResponder"/>

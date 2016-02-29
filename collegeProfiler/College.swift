@@ -10,23 +10,27 @@ import UIKit
 
 class College: NSObject
 {
+    var webpage = ""
     var name = ""
     var location = ""
     var numberOfStudents = 0
     var image = UIImage(named: "college")
-    init(Name: String, Location: String, NumberOfStudents: Int, Image: UIImage)
+    init(Name: String, Location: String, NumberOfStudents: Int, Image: UIImage, WebPage: String)
     {
     super.init()
     name = Name
     location = Location
     numberOfStudents = NumberOfStudents
     image = Image
+    webpage = WebPage
+        
 }
-init(Name: String, Location: String)
+    init(Name: String, Location: String, WebPage: String)
 {
     super.init()
     name = Name
     location = Location
+    webpage = WebPage
 }
 
 
