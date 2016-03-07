@@ -43,7 +43,8 @@ class DetailedViewController: UIViewController, SFSafariViewControllerDelegate, 
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let detailView = segue.destinationViewController as! DetailedViewController
+        let MapView = segue.destinationViewController as! MapViewController
+        MapView.location = locationTF.text!
     }
     
     func safariViewControllerDidFinish(controller: SFSafariViewController)
@@ -75,7 +76,7 @@ class DetailedViewController: UIViewController, SFSafariViewControllerDelegate, 
 
     }
 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+       func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         myImagePicker.dismissViewControllerAnimated(true) { () -> Void in
             let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage

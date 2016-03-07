@@ -25,9 +25,9 @@ class ViewController: UIViewController, UITableViewDataSource
         editButton.tag = 0
         
         
-        colleges.append(College(Name: "The University of Iowa", Location: "Iowa", NumberOfStudents: 31387, Image: UIImage(named: "iowa")! ,WebPage: "uiowa.edu/"))
-        colleges.append(College(Name: "The University of Michigan", Location: "Michigan", NumberOfStudents: 43651, Image: UIImage(named: "michigan")! ,WebPage: "umich.edu/"))
-        colleges.append(College(Name: "University of Missouri", Location: "Missouri", NumberOfStudents: 35441, Image: UIImage(named: "mizzou")! ,WebPage : "missouri.edu/"))
+        colleges.append(College(Name: "The University of Iowa", Location: "Iowa City, IA 52242", NumberOfStudents: 31387, Image: UIImage(named: "iowa")! ,WebPage: "uiowa.edu/"))
+        colleges.append(College(Name: "The University of Michigan", Location: "500 S State St, Ann Arbor, MI 48109", NumberOfStudents: 43651, Image: UIImage(named: "michigan")! ,WebPage: "umich.edu/"))
+        colleges.append(College(Name: "University of Missouri", Location: "Columbia, MO 65211", NumberOfStudents: 35441, Image: UIImage(named: "mizzou")! ,WebPage : "missouri.edu/"))
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int

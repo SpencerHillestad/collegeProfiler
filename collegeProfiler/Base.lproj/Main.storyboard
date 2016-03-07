@@ -152,6 +152,14 @@
                                     <action selector="cameraButtonTapped:" destination="S7S-21-K3S" eventType="touchUpInside" id="sdG-oi-qdX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJp-o0-U0n">
+                                <rect key="frame" x="4" y="220" width="143" height="94"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <state key="normal" title="🌎"/>
+                                <connections>
+                                    <segue destination="EVK-bI-4a6" kind="show" id="WuM-1t-6Xl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -174,7 +182,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIn-Sl-ZO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="266"/>
+            <point key="canvasLocation" x="1857" y="280"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="kSO-eL-Oo1">
+            <objects>
+                <viewController id="EVK-bI-4a6" customClass="MapViewController" customModule="collegeProfiler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dgz-kh-Zs4"/>
+                        <viewControllerLayoutGuide type="bottom" id="q2Y-Uh-TaU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wQU-P6-OoI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ozx-YD-t9l">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gby-V7-yB8">
+                                <rect key="frame" x="54" y="120" width="75" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <state key="normal" title="👇🏿"/>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="EVK-bI-4a6" eventType="touchUpInside" id="bdb-Xe-3pT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZK-pD-ICK">
+                                <rect key="frame" x="20" y="82" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kVL-jU-aKd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ozx-YD-t9l" secondAttribute="trailing" constant="-20" id="25V-cF-WuW"/>
+                            <constraint firstItem="gby-V7-yB8" firstAttribute="centerY" secondItem="wQU-P6-OoI" secondAttribute="centerY" id="31S-x7-yK0"/>
+                            <constraint firstItem="aZK-pD-ICK" firstAttribute="top" secondItem="Dgz-kh-Zs4" secondAttribute="bottom" id="Ntt-5g-esr"/>
+                            <constraint firstItem="Ozx-YD-t9l" firstAttribute="top" secondItem="aZK-pD-ICK" secondAttribute="bottom" id="dAb-a6-mSt"/>
+                            <constraint firstItem="q2Y-Uh-TaU" firstAttribute="top" secondItem="Ozx-YD-t9l" secondAttribute="bottom" constant="-20" id="dt9-QC-rnH"/>
+                            <constraint firstItem="gby-V7-yB8" firstAttribute="centerX" secondItem="wQU-P6-OoI" secondAttribute="centerX" id="hks-uS-TTC"/>
+                            <constraint firstItem="Ozx-YD-t9l" firstAttribute="leading" secondItem="wQU-P6-OoI" secondAttribute="leadingMargin" constant="-20" id="mig-VM-gTy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="Ozx-YD-t9l" id="4vv-5l-gAQ"/>
+                        <outlet property="myTextField" destination="aZK-pD-ICK" id="h1K-Pu-9Yl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJD-CH-Ia9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2503" y="280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bw9-BP-nUn">
